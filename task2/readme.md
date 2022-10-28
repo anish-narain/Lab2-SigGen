@@ -35,7 +35,8 @@ V100:
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/69715492/198573770-bfb70c3e-b640-476d-a2bc-112200edaa6b.png">
 
- 
+NOTE: I could have also implemented this by adding an additional parameter in ROM and setting it = vbdValue() in the testbench function and then offsetting one of the addresses by this parameter.
+  
 **Offsetting Y-Values**\
 To implement this I did not make any changes between addr1 and addr2. However I offsetted the dout generated for dout1 when it gets plotted in the testbench code.
   
