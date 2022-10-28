@@ -51,6 +51,7 @@ VL_ATTR_COLD void Vsinegen___024root___ctor_var_reset(Vsinegen___024root* vlSelf
     vlSelf->clk = VL_RAND_RESET_I(1);
     vlSelf->rst = VL_RAND_RESET_I(1);
     vlSelf->en = VL_RAND_RESET_I(1);
+    vlSelf->offset = VL_RAND_RESET_I(8);
     vlSelf->incr = VL_RAND_RESET_I(8);
     vlSelf->dout1 = VL_RAND_RESET_I(8);
     vlSelf->dout2 = VL_RAND_RESET_I(8);
