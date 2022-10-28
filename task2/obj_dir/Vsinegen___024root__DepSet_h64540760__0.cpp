@@ -14,15 +14,15 @@ VL_INLINE_OPT void Vsinegen___024root___sequent__TOP__0(Vsinegen___024root* vlSe
     CData/*7:0*/ __Vdly__sinegen__DOT__address;
     // Body
     __Vdly__sinegen__DOT__address = vlSelf->sinegen__DOT__address;
-    vlSelf->dout2 = vlSelf->sinegen__DOT__sineRom__DOT__rom_array
-        [vlSelf->sinegen__DOT__address];
     __Vdly__sinegen__DOT__address = ((IData)(vlSelf->rst)
                                       ? 0U : (0xffU 
                                               & ((IData)(vlSelf->en)
                                                   ? 
-                                                 ((IData)(vlSelf->sinegen__DOT__address) 
-                                                  + (IData)(vlSelf->incr))
+                                                 ((IData)(3U) 
+                                                  + (IData)(vlSelf->sinegen__DOT__address))
                                                   : (IData)(vlSelf->sinegen__DOT__address))));
+    vlSelf->dout2 = vlSelf->sinegen__DOT__sineRom__DOT__rom_array
+        [vlSelf->sinegen__DOT__address];
     vlSelf->dout1 = vlSelf->sinegen__DOT__sineRom__DOT__rom_array
         [(0xffU & ((IData)(vlSelf->sinegen__DOT__address) 
                    + (IData)(vlSelf->incr)))];
