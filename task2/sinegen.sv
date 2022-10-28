@@ -6,7 +6,9 @@ module sinegen #(
     input logic        rst,
     input logic        en,
     input logic [D_WIDTH-1:0] incr,
-    output logic [D_WIDTH-1:0] dout
+    output logic [D_WIDTH-1:0] dout1,
+    output logic [D_WIDTH-1:0] dout2
+
 );
 
     logic [A_WIDTH-1:0] address;
@@ -21,8 +23,11 @@ counter addrCounter (
 
 rom sineRom(
     .clk (clk),
-    .addr (address),
-    .dout (dout)
+    .addr1 (address+incr),
+    .addr2 (address),
+    .dout1 (dout1),
+    .dout2 (dout2)
 );
 
 endmodule
+
