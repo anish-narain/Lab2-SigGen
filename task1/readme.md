@@ -33,4 +33,25 @@ Which produces the following module:
 
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/69715492/198255894-6018ed82-1af5-4b69-ba98-56f43dc90a88.png">
 
+How it works:
+* rst, en, clk work the same way for the original counter module. The difference is we need to add an increment input. The increment is what determines the frequency of the wave. Before our counter would increment by 1. Now it will increment by the amount we specify in the increment input
+* The output of the counter is the address input in the ROM
+* In this manner we are able to traverse through the ROM addresses using the counter. As the ROM contains the coordinates for a sinusoid, the dout of the ROM helps plot the sine wave
+
+**How does the increment work?**
+The counter produces the address of the ROM, and the output is the sine (actually cosine) values. The frequency of the output sinewave is determined by incr[7:0]. 
+
+This is because if we have a higher increment. This means the counter will traverse through the ROM addresses in a few number of cycles. (10, 20, 30...) vs (1,2,3...256), the first one takes a fewer number of cycles to reach the end. 
+
+In general the output sinewave frequency is:
+<img width="188" alt="image" src="https://user-images.githubusercontent.com/69715492/198557510-2de31cb9-1288-4e6c-a671-c04070fa89b1.png">
+
+The counter produces the address of the ROM, and the output is the sine (actually cosine) values. The frequency of the output sinewave is determined by incr[7:0]. 
+
 ## Step 3 ##
+
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/69715492/198558179-3cb1fdef-cf9b-40e3-bf51-dfa5a7187c35.png">
+
+anotate this, and quick ss for step 4
+
+## Step 4 ##
