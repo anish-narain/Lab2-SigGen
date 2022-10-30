@@ -23,6 +23,10 @@ Analysing the python code:
 
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/69715492/198250772-b6f88b8d-76f4-441a-82f4-a685964e96aa.png">
 
+**In Summary**
+* Python script (*sinegen.py*) used to generate values that plot a cosine function
+* The values are stored in *sinerom.mem*
+* Values are stored in *rom.sv* using the $readmemh(.) function
 
 ## Step 2 ##
 In this step I created the sinegen.sv module:
@@ -44,6 +48,7 @@ The counter produces the address of the ROM, and the output is the sine (actuall
 This is because if we have a higher increment. This means the counter will traverse through the ROM addresses in a few number of cycles. (10, 20, 30...) vs (1,2,3...256), the first one takes a fewer number of cycles to reach the end. 
 
 In general the output sinewave frequency is:
+
 <img width="188" alt="image" src="https://user-images.githubusercontent.com/69715492/198557510-2de31cb9-1288-4e6c-a671-c04070fa89b1.png">
 
 The counter produces the address of the ROM, and the output is the sine (actually cosine) values. The frequency of the output sinewave is determined by incr[7:0]. 
@@ -52,6 +57,19 @@ The counter produces the address of the ROM, and the output is the sine (actuall
 
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/69715492/198558179-3cb1fdef-cf9b-40e3-bf51-dfa5a7187c35.png">
 
-anotate this, and quick ss for step 4
+[NEEDS ANNOTATION]
+
+**New Function Learned**\
+*vbdGetkey()*: used to check if a key has been pressed. 
+
+```
+//exits if 'q' key pressed
+ if ((vbdGetkey()=='q')) 
+      exit(0); 
+```
 
 ## Step 4 ##
+
+<img width="521" alt="image" src="https://user-images.githubusercontent.com/69715492/198871959-f0ce7d55-9c6d-4420-9920-ec51a8be6efa.png">
+
+I took the counter doit.sh file and replaced the word 'counter' with 'sinegen'. This worked because all the counter files and header files were aligned with the sinegen name.
