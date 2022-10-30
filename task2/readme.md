@@ -1,7 +1,11 @@
 # Task 2 #
 **Firstly I had to create a new structure using a dual port ROM.**
 
-<insert changes to code and rough drawing of new sinegen model>
+Dual port ROM:
+[Annotated image in OneNote]
+
+New sinegen model:
+[Annotated image in OneNote]
 
 **Creating a phase difference using a constant (offsetting the X-Values)**\
 To implement this, we want to be outputting an address "further down" the sinusoid on the same cycle. According to the instructions, offsetting the address by 64 meant the two waveforms will be 90 degrees apart. Why? Because 256 addresses represents 360 degrees. Dividing both by 4 gives 64 addresses represents 90 degrees. I made this change in the rom.sv file:
